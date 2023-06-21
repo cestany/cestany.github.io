@@ -27,6 +27,25 @@
             padding: 20px;
         }
 
+        .tabs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d1521;
+            padding: 10px;
+        }
+
+        .tab-link {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .tab-link.active {
+            background-color: #1e2832;
+        }
+
         .section {
             display: none;
         }
@@ -58,7 +77,7 @@
         <img src="your_photo.jpg" alt="Your Photo">
     </header>
 
-    <nav>
+    <nav class="tabs">
         <button class="tab-link active" onclick="openSection(event, 'about-me')">About me</button>
         <button class="tab-link" onclick="openSection(event, 'portfolio')">My portfolio</button>
         <button class="tab-link" onclick="openSection(event, 'projects')">My projects</button>
