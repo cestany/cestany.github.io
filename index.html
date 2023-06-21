@@ -1,14 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Lord Ribeye's Prayer</title>
-  </head>
-  <body>
+<html>
+<head>
+    <title>My Personal Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e2832;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0d1521;
+            padding: 20px;
+            text-align: right;
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .section {
+            display: none;
+        }
+
+        footer {
+            background-color: #0d1521;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function openSection(event, sectionName) {
+            var i, tabContent, tabLinks;
+            tabContent = document.getElementsByClassName("section");
+            for (i = 0; i < tabContent.length; i++) {
+                tabContent[i].style.display = "none";
+            }
+            tabLinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tabLinks.length; i++) {
+                tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+            }
+            document.getElementById(sectionName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="your_photo.jpg" alt="Your Photo">
+    </header>
+
+    <nav>
+        <button class="tab-link active" onclick="openSection(event, 'about-me')">About me</button>
+        <button class="tab-link" onclick="openSection(event, 'portfolio')">My portfolio</button>
+        <button class="tab-link" onclick="openSection(event, 'projects')">My projects</button>
+    </nav>
+
     <main>
-        <h1>The muscle meat and associated fat of large ruminant animals, grass fed if you can afford it.</h1>  
+        <div id="about-me" class="section" style="display: block;">
+            <h2>About me</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis massa vitae mauris maximus tempus. Nulla facilisi. Mauris volutpat scelerisque commodo.</p>
+        </div>
+
+        <div id="portfolio" class="section">
+            <h2>My portfolio</h2>
+            <div class="grid">
+                <a href="portfolio-item1.html"><img src="portfolio_item1.jpg" alt="Portfolio Item 1"></a>
+                <a href="portfolio-item2.html"><img src="portfolio_item2.jpg" alt="Portfolio Item 2"></a>
+                <a href="portfolio-item3.html"><img src="portfolio_item3.jpg" alt="Portfolio Item 3"></a>
+                <a href="portfolio-item4.html"><img src="portfolio_item4.jpg" alt="Portfolio Item 4"></a>
+            </div>
+        </div>
+
+        <div id="projects" class="section">
+            <h2>My projects</h2>
+            <div class="grid">
+                <a href="project1.html"><img src="project1.jpg" alt="Project 1"></a>
+                <a href="project2.html"><img src="project2.jpg" alt="Project 2"></a>
+            </div>
+        </div>
     </main>
-  </body>
+
+    <footer>
+        <h2>Contact me</h2>
+        <p>
+            <a href="https://twitter.com/your_twitter">Twitter</a> |
+            <a href="https://linkedin.com/in/your_linkedin">LinkedIn</a> |
+            <a href="https://facebook.com/your_facebook">Facebook</a> |
+            <a href="https://instagram.com/your_instagram">Instagram</a>
+        </p>
+    </footer>
+</body>
 </html>
