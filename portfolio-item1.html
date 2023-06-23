@@ -9,6 +9,8 @@
             color: white;
             margin: 0;
             padding: 0;
+            display: flex;
+            align-items: flex-start;
         }
 
         header {
@@ -25,6 +27,7 @@
 
         main {
             padding: 20px;
+            flex-grow: 1;
         }
 
         .return-button {
@@ -36,18 +39,26 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-bottom: 20px;
         }
 
         .return-button:hover {
             background-color: #15222f;
         }
 
-        footer {
-            background-color: #0d1521;
-            padding: 20px;
-            text-align: center;
+        .content-wrapper {
+            display: flex;
         }
-        
+
+        .content-wrapper .text-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .content-wrapper .image-content {
+            flex: 1;
+        }
+
         .social-icons {
             display: flex;
             justify-content: center;
@@ -70,33 +81,37 @@
         .social-icons a:hover {
             opacity: 0.7;
         }
+
+        footer {
+            background-color: #0d1521;
+            padding: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="your_photo.png" alt="Your Photo">
+        <img src="your_photo.jpg" alt="Your Photo">
     </header>
 
     <main>
-        <!-- Your content for the Portfolio Item 1 page goes here -->
-        <h2>Portfolio Item 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis massa vitae mauris maximus tempus. Nulla facilisi. Mauris volutpat scelerisque commodo.</p>
-        <button class="return-button" onclick="goToPortfolio()">Return to Portfolio</button>
+        <button class="return-button" onclick="goBack()">Return</button>
+
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Portfolio Item 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis massa vitae mauris maximus tempus. Nulla facilisi. Mauris volutpat scelerisque commodo.</p>
+            </div>
+
+            <div class="image-content">
+                <img src="your_image.jpg" alt="Your Image">
+            </div>
+        </div>
     </main>
 
-    <footer>
-        <h2>Social Media</h2>
-        <div class="social-icons">
-            <a href="https://twitter.com/CristianEstany"><img src="twitter_icon.png" alt="Twitter"></a>
-            <a href="https://www.linkedin.com/in/cristian-estany"><img src="linkedin_icon.png" alt="LinkedIn"></a>
-            <a href="https://www.facebook.com/cristian.estany"><img src="facebook_icon.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/cristian.estany"><img src="instagram_icon.png" alt="Instagram"></a>
-        </div>
-    </footer>
-
     <script>
-        function goToPortfolio() {
-            window.location.href = "index.html#portfolio";
+        function goBack() {
+            window.history.back();
         }
     </script>
 </body>
