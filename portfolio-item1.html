@@ -9,25 +9,18 @@
             color: white;
             margin: 0;
             padding: 0;
-            display: flex;
-            align-items: flex-start;
         }
 
         header {
             background-color: #0d1521;
             padding: 20px;
-            text-align: right;
+            text-align: center;
         }
 
         header img {
             width: 100px;
             height: 100px;
             border-radius: 50%;
-        }
-
-        main {
-            padding: 20px;
-            flex-grow: 1;
         }
 
         .return-button {
@@ -46,17 +39,8 @@
             background-color: #15222f;
         }
 
-        .content-wrapper {
-            display: flex;
-        }
-
-        .content-wrapper .text-content {
-            flex: 1;
-            margin-right: 20px;
-        }
-
-        .content-wrapper .image-content {
-            flex: 1;
+        main {
+            padding: 20px;
         }
 
         .social-icons {
@@ -94,17 +78,21 @@
         <img src="your_photo.png" alt="Your Photo">
     </header>
 
-    <main>
-        <button class="return-button" onclick="goBack()">Return</button>
+    <section>
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="return-button" onclick="goBack()">Return</button>
+        </div>
+    </section>
 
+    <main>
+        <h2>Portfolio Item 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis massa vitae mauris maximus tempus. Nulla facilisi. Mauris volutpat scelerisque commodo.</p>
         <div class="content-wrapper">
             <div class="text-content">
-                <h2>Portfolio Item 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis massa vitae mauris maximus tempus. Nulla facilisi. Mauris volutpat scelerisque commodo.</p>
+                <!-- Add your text content here -->
             </div>
-
             <div class="image-content">
-                <img src="your_image.jpg" alt="Your Image">
+                <!-- Add your image content here -->
             </div>
         </div>
     </main>
