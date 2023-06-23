@@ -43,7 +43,6 @@
             font-size: 16px;
             text-transform: uppercase;
             color: #a3b1c2;
-            background-color: #0d1521;
             border: none;
             background: none;
             outline: none;
@@ -61,7 +60,7 @@
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
